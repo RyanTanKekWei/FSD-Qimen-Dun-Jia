@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Qi Men Dun Jia — English Calculator</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header><div class="wrap">
+<h1>Qi Men Dun Jia — English Calculator</h1>
+<div class="sub">Hourly Qi Men • Chai Bu • Rotating Plate • English display</div>
+<div class="controls">
+<div><label>Date</label><input id="date" type="date"></div>
+<div><label>Time</label><input id="time" type="time" step="60"></div>
+<div><label>Method</label><select id="method"><option value="chaibu">Chai Bu</option></select></div>
+<div><label>Time Zone</label><select id="tz"><option value="8">Malaysia / UTC+8</option></select></div>
+<div><button onclick="cast()">GENERATE CHART</button></div>
+</div>
+</div></header>
+
+<main>
+<div class="card"><div class="summary" id="summary"></div></div>
+<div class="card">
+<div class="orientation">SOUTH</div>
+<div class="chart" id="chart"></div>
+<div class="orientation">NORTH</div>
+<div class="status" style="text-align:center;margin-top:8px">
+  Nine-Palace order: 4 Xun · 9 Li · 2 Kun / 3 Zhen · 5 Center · 7 Dui / 8 Gen · 1 Kan · 6 Qian
+</div>
+</div>
+<div class="card">
+<h3>Chart Information</h3>
+<table id="details"></table>
+</div>
+<div class="card"><div class="warn">
+<strong>Calculation profile:</strong> This version uses a browser-side Chai Bu rotating-plate engine modeled on the published Chai Bu structure: solar-term/Yuan → Ju → Earth Plate → Chief Star → Heaven Plate → Chief Gate → Eight Doors → Eight Deities. The three mQimen 6.1.0 screenshots supplied in this project are retained as calibration cases. mQimen supports Hour-family Chai Bu/Zhi Run/Yin methods, hidden stems and manual chart selection; Typing Astro also supports selecting any specific moment for a live Hour Chart.
+</div></div>
+</main>
+
+<script src="js/qimen.js"></script>
+<script src="js/qimen.js"></script>
+</body>
+</html>
